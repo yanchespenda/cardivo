@@ -77,7 +77,7 @@ export default async function render(req: NowRequest, res: NowResponse) {
      */
     ctx.font = '92px Roboto'
     ctx.fillStyle = '#FAFAFA'
-    ctx.fillText(`Nyanpasu! ✋`, 1150, 280)
+    ctx.fillText(`Nyanpasu!`, 1150, 280)
 
     /**
      * Username text
