@@ -40,3 +40,9 @@ export interface ParsedRequest {
     _twitter?: string | string[]
     __disableAnimation?: string | string[]
 }
+
+export interface ParsedCanvasRequest {
+    username: string | string[]
+    discriminator?: string | string[]
+    avatar: string | string[]
+}
