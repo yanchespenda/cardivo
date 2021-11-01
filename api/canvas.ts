@@ -12,6 +12,7 @@ if (
 import { NowRequest, NowResponse } from '@vercel/node';
 import Canvas from 'canvas';
 import { ParsedCanvasRequest } from '../typings/types';
+import path from 'path';
 
 
 export default async function render(req: NowRequest, res: NowResponse) {
@@ -34,7 +35,7 @@ export default async function render(req: NowRequest, res: NowResponse) {
     /**
      * Load a font
      */
-    Canvas.registerFont('./../fonts/Roboto-Regular.ttf', { family: 'Roboto' })
+    Canvas.registerFont(path.join(__dirname, '..', 'fonts', 'Roboto-Regular.ttf'), { family: 'Roboto' })
 
     /**
      * Create a new canvas for rounded avatar
@@ -62,7 +63,7 @@ export default async function render(req: NowRequest, res: NowResponse) {
     /**
      * Add a background image
      */
-    const backgroundImage = await Canvas.loadImage('./../data/base.png')
+    const backgroundImage = await Canvas.loadImage(path.join(__dirname, '..', 'data', 'base.png'))
     ctx.drawImage(backgroundImage, 0, 0)
 
     /**
