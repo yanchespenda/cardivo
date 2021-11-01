@@ -5,3 +5,4 @@ sh configure
 make
 ls -l libz*
 cp libz.so.1 ../node_modules/canvas/build/Release/
+cp libz.so.1 /var/task/node_modules/canvas/build/Release
