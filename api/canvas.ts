@@ -34,7 +34,7 @@ export default async function render(req: NowRequest, res: NowResponse) {
     /**
      * Load a font
      */
-    Canvas.registerFont('fonts/Roboto-Regular.ttf', { family: 'Roboto' })
+    Canvas.registerFont('./../fonts/Roboto-Regular.ttf', { family: 'Roboto' })
 
     /**
      * Create a new canvas for rounded avatar
@@ -62,7 +62,7 @@ export default async function render(req: NowRequest, res: NowResponse) {
     /**
      * Add a background image
      */
-    const backgroundImage = await Canvas.loadImage('data/base.png')
+    const backgroundImage = await Canvas.loadImage('./../data/base.png')
     ctx.drawImage(backgroundImage, 0, 0)
 
     /**
